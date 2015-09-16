@@ -20,6 +20,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Oj-hL-ku6">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.87396507359999998" blue="0.66938323749999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="com.yahoo.movieCell" rowHeight="130" id="sCr-ZB-YMc" customClass="MovieCell">
                                         <rect key="frame" x="0.0" y="92" width="600" height="130"/>
@@ -73,6 +74,7 @@
                                                 <constraint firstItem="ghR-LW-hfg" firstAttribute="leading" secondItem="tqb-Wl-Q0E" secondAttribute="trailing" constant="8" id="yFH-5g-aS5"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.87396507359999998" blue="0.66938323749999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="criticRatingLabel" destination="ghR-LW-hfg" id="B6z-9i-QOW"/>
                                             <outlet property="durationLabel" destination="jyx-lw-twI" id="ylJ-ni-lDg"/>
@@ -85,7 +87,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.87396507359999998" blue="0.66938323749999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2Oj-hL-ku6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5hT-3n-XS4"/>
                             <constraint firstAttribute="trailing" secondItem="2Oj-hL-ku6" secondAttribute="trailing" id="7MJ-9o-KF4"/>
