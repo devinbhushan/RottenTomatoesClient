@@ -7,6 +7,7 @@
 //
 
 #import "MoviesViewController.h"
+#import "MovieDetailsViewController.h"
 #import "MovieCell.h"
 #import "UIImageView+AFNetworking.h"
 
@@ -84,15 +85,18 @@
   return movieCell;
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little
-preparation before navigation
+// preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+  //     Get the new view controller using [segue destinationViewController].
+  //     Pass the selected object to the new view controller.
+  MovieCell *cell = (MovieCell *)sender;
+  NSDictionary *movieData = [self.boxOfficeMovies
+      objectAtIndex:(int)[self.movieTableView indexPathForCell:cell].section];
+  MovieDetailsViewController *vc = [segue destinationViewController];
+  vc.movieData = movieData;
 }
-*/
 
 @end

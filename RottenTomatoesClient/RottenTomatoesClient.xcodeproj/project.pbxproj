@@ -14,6 +14,7 @@
 		0159E67B1BA8D27F0011A444 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0159E6791BA8D27F0011A444 /* LaunchScreen.storyboard */; };
 		0159E6841BA8D2C00011A444 /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159E6831BA8D2C00011A444 /* MoviesViewController.m */; settings = {ASSET_TAGS = (); }; };
 		0159E6881BA8DD1D0011A444 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159E6871BA8DD1D0011A444 /* MovieCell.m */; settings = {ASSET_TAGS = (); }; };
+		0170A54F1BA9105500F743D8 /* MovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170A54E1BA9105500F743D8 /* MovieDetailsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		52C02F759CDC4CDAEDE00918 /* libPods-RottenTomatoesClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 087447F9CFF41A963A9122E9 /* libPods-RottenTomatoesClient.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,8 @@
 		0159E6831BA8D2C00011A444 /* MoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesViewController.m; sourceTree = "<group>"; };
 		0159E6861BA8DD1D0011A444 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		0159E6871BA8DD1D0011A444 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		0170A54D1BA9105500F743D8 /* MovieDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailsViewController.h; sourceTree = "<group>"; };
+		0170A54E1BA9105500F743D8 /* MovieDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailsViewController.m; sourceTree = "<group>"; };
 		087447F9CFF41A963A9122E9 /* libPods-RottenTomatoesClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RottenTomatoesClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C85D70CB796C98F31FC0772 /* Pods-RottenTomatoesClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RottenTomatoesClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RottenTomatoesClient/Pods-RottenTomatoesClient.debug.xcconfig"; sourceTree = "<group>"; };
 		B0DDFEE1ACAD99C934291CEB /* Pods-RottenTomatoesClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RottenTomatoesClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-RottenTomatoesClient/Pods-RottenTomatoesClient.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 			children = (
 				0159E6821BA8D2C00011A444 /* MoviesViewController.h */,
 				0159E6831BA8D2C00011A444 /* MoviesViewController.m */,
+				0170A54D1BA9105500F743D8 /* MovieDetailsViewController.h */,
+				0170A54E1BA9105500F743D8 /* MovieDetailsViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0170A54F1BA9105500F743D8 /* MovieDetailsViewController.m in Sources */,
 				0159E6841BA8D2C00011A444 /* MoviesViewController.m in Sources */,
 				0159E6701BA8D27F0011A444 /* AppDelegate.m in Sources */,
 				0159E6881BA8DD1D0011A444 /* MovieCell.m in Sources */,
