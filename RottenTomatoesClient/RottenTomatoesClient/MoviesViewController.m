@@ -8,6 +8,7 @@
 
 #import "MoviesViewController.h"
 #import "MovieCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface MoviesViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -77,13 +78,8 @@
       stringWithFormat:@"%@", movieData[@"ratings"][@"critics_score"]];
 
   NSURL *imageURL = [NSURL URLWithString:movieData[@"posters"][@"original"]];
-  NSLog(@"image url: %@", imageURL);
-  NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-  NSLog(@"image data: %@", imageData);
-  UIImage *image = [[UIImage alloc] initWithData:imageData];
 
-  movieCell.moviePosterView = nil;
-  [movieCell.moviePosterView setImage:image];
+  [movieCell.moviePosterView setImageWithURL:imageURL];
 
   return movieCell;
 }

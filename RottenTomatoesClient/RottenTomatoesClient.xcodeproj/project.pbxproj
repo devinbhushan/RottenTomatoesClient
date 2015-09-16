@@ -14,6 +14,7 @@
 		0159E67B1BA8D27F0011A444 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0159E6791BA8D27F0011A444 /* LaunchScreen.storyboard */; };
 		0159E6841BA8D2C00011A444 /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159E6831BA8D2C00011A444 /* MoviesViewController.m */; settings = {ASSET_TAGS = (); }; };
 		0159E6881BA8DD1D0011A444 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159E6871BA8DD1D0011A444 /* MovieCell.m */; settings = {ASSET_TAGS = (); }; };
+		52C02F759CDC4CDAEDE00918 /* libPods-RottenTomatoesClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 087447F9CFF41A963A9122E9 /* libPods-RottenTomatoesClient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,9 @@
 		0159E6831BA8D2C00011A444 /* MoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesViewController.m; sourceTree = "<group>"; };
 		0159E6861BA8DD1D0011A444 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		0159E6871BA8DD1D0011A444 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		087447F9CFF41A963A9122E9 /* libPods-RottenTomatoesClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RottenTomatoesClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C85D70CB796C98F31FC0772 /* Pods-RottenTomatoesClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RottenTomatoesClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RottenTomatoesClient/Pods-RottenTomatoesClient.debug.xcconfig"; sourceTree = "<group>"; };
+		B0DDFEE1ACAD99C934291CEB /* Pods-RottenTomatoesClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RottenTomatoesClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-RottenTomatoesClient/Pods-RottenTomatoesClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C02F759CDC4CDAEDE00918 /* libPods-RottenTomatoesClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,8 @@
 			children = (
 				0159E66A1BA8D27F0011A444 /* RottenTomatoesClient */,
 				0159E6691BA8D27F0011A444 /* Products */,
+				090C1879B8EF1ADA2FC1F3B1 /* Pods */,
+				AB268EE2F86279D57F712ECB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +99,23 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		090C1879B8EF1ADA2FC1F3B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C85D70CB796C98F31FC0772 /* Pods-RottenTomatoesClient.debug.xcconfig */,
+				B0DDFEE1ACAD99C934291CEB /* Pods-RottenTomatoesClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AB268EE2F86279D57F712ECB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				087447F9CFF41A963A9122E9 /* libPods-RottenTomatoesClient.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0159E67F1BA8D27F0011A444 /* Build configuration list for PBXNativeTarget "RottenTomatoesClient" */;
 			buildPhases = (
+				5322C694400DCDFBA441B4F6 /* Check Pods Manifest.lock */,
 				0159E6641BA8D27F0011A444 /* Sources */,
 				0159E6651BA8D27F0011A444 /* Frameworks */,
 				0159E6661BA8D27F0011A444 /* Resources */,
+				F19E1DE0D85705A26632B5C0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,6 +182,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5322C694400DCDFBA441B4F6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F19E1DE0D85705A26632B5C0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RottenTomatoesClient/Pods-RottenTomatoesClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0159E6641BA8D27F0011A444 /* Sources */ = {
@@ -275,6 +334,7 @@
 		};
 		0159E6801BA8D27F0011A444 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C85D70CB796C98F31FC0772 /* Pods-RottenTomatoesClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RottenTomatoesClient/Info.plist;
@@ -286,6 +346,7 @@
 		};
 		0159E6811BA8D27F0011A444 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0DDFEE1ACAD99C934291CEB /* Pods-RottenTomatoesClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RottenTomatoesClient/Info.plist;
@@ -314,6 +375,7 @@
 				0159E6811BA8D27F0011A444 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
