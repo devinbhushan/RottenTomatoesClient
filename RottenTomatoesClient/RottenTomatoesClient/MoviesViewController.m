@@ -10,6 +10,7 @@
 #import "MovieDetailsViewController.h"
 #import "MovieCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "MBProgressHUD.h"
 
 @interface MoviesViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -32,6 +33,7 @@
                 forControlEvents:UIControlEventValueChanged];
   [self.movieTableView addSubview:self.refreshControl];
 
+  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   [self fetchMovies];
   // Do any additional setup after loading the view.
 }
@@ -55,6 +57,7 @@
             [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         self.boxOfficeMovies = movieJson[@"movies"];
         [self.movieTableView reloadData];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
       }] resume];
 }
 

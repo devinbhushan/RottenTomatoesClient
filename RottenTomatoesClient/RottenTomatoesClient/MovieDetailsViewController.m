@@ -8,6 +8,7 @@
 
 #import "MovieDetailsViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "MBProgressHUD.h"
 
 @interface MovieDetailsViewController ()
 
@@ -23,7 +24,9 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   [self setViewValues];
+  [MBProgressHUD hideHUDForView:self.view animated:YES];
   // Do any additional setup after loading the view.
 }
 
