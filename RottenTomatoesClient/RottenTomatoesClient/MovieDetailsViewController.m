@@ -45,6 +45,7 @@
   NSURL *imageURL =
       [NSURL URLWithString:self.movieData[@"posters"][@"original"]];
   [self.backgroundMoviePoster setImageWithURL:imageURL];
+  self.title = self.movieData[@"title"];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,4 +10,6 @@
 
 @interface MoviesViewController : UIViewController
 
+- (void)onRefresh;
+
 @end

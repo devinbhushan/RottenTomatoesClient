@@ -5,7 +5,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Movies View Controller-->
+        <!--Top Movies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MoviesViewController" sceneMemberID="viewController">
@@ -93,7 +93,7 @@
                             <constraint firstItem="2Oj-hL-ku6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lXW-hv-NcY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6Hp-lP-1XN"/>
+                    <navigationItem key="navigationItem" title="Top Movies" id="6Hp-lP-1XN"/>
                     <connections>
                         <outlet property="movieTableView" destination="2Oj-hL-ku6" id="dYu-jZ-1Ed"/>
                     </connections>
@@ -102,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="1172" y="315"/>
         </scene>
-        <!--Movie Details View Controller-->
+        <!--Movie-->
         <scene sceneID="99q-ri-adh">
             <objects>
                 <viewController id="Kfy-RB-A88" customClass="MovieDetailsViewController" sceneMemberID="viewController">
@@ -199,6 +199,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Movie" id="gzB-T0-K5b"/>
                     <connections>
                         <outlet property="audienceRatingLabel" destination="aMO-a1-Fzj" id="EPh-8a-aqI"/>
                         <outlet property="backgroundMoviePoster" destination="4So-jF-5Di" id="x5h-iF-HcD"/>

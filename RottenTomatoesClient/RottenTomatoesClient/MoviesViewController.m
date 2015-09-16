@@ -15,6 +15,7 @@
 
 @property(nonatomic, strong) NSArray *boxOfficeMovies;
 @property(weak, nonatomic) IBOutlet UITableView *movieTableView;
+@property(nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
@@ -25,6 +26,11 @@
 
   self.movieTableView.delegate = self;
   self.movieTableView.dataSource = self;
+
+  [self.refreshControl addTarget:self
+                          action:@selector(onRefresh:)
+                forControlEvents:UIControlEventValueChanged];
+  [self.movieTableView addSubview:self.refreshControl];
 
   [self fetchMovies];
   // Do any additional setup after loading the view.
@@ -48,7 +54,6 @@
         NSDictionary *movieJson =
             [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         self.boxOfficeMovies = movieJson[@"movies"];
-        //        NSLog(@"Got movies: %@", self.boxOfficeMovies);
         [self.movieTableView reloadData];
       }] resume];
 }
@@ -85,6 +90,11 @@
   return movieCell;
 }
 
+- (void)tableView:(UITableView *)tableView
+    didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little
@@ -97,6 +107,11 @@
       objectAtIndex:(int)[self.movieTableView indexPathForCell:cell].section];
   MovieDetailsViewController *vc = [segue destinationViewController];
   vc.movieData = movieData;
+}
+
+- (void)onRefresh {
+  [self fetchMovies];
+  [self.refreshControl endRefreshing];
 }
 
 @end
