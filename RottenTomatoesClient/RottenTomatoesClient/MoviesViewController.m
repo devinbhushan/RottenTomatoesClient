@@ -53,6 +53,16 @@
         dataTaskWithURL:boxOfficeUrl
       completionHandler:^(NSData *data, NSURLResponse *response,
                           NSError *error) {
+        if (error) {
+          UIAlertView *alert = [[UIAlertView alloc]
+                  initWithTitle:@"Failed to load!"
+                        message:@"Connection to Rotten Tomatoes Failed"
+                       delegate:self
+              cancelButtonTitle:@"Cancel"
+              otherButtonTitles:nil];
+          [alert show];
+        }
+
         NSDictionary *movieJson =
             [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         self.boxOfficeMovies = movieJson[@"movies"];
@@ -76,7 +86,6 @@
       [tableView dequeueReusableCellWithIdentifier:@"com.yahoo.movieCell"];
 
   NSDictionary *movieData = self.boxOfficeMovies[indexPath.section];
-  NSLog(@"Movie data: %@", movieData);
 
   movieCell.nameLabel.text = [NSString
       stringWithFormat:@"%@ (%@)", movieData[@"title"], movieData[@"year"]];
