@@ -88,6 +88,12 @@
 
   NSURL *imageURL = [NSURL URLWithString:movieData[@"posters"][@"original"]];
 
+  movieCell.moviePosterView.alpha = 0.0;
+  [UIView animateWithDuration:2.5f
+                   animations:^{
+                     movieCell.moviePosterView.alpha = 1.0;
+                   }];
+
   [movieCell.moviePosterView setImageWithURL:imageURL];
 
   return movieCell;

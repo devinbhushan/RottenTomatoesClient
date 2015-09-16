@@ -24,6 +24,11 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  self.backgroundMoviePoster.alpha = 0.0;
+  [UIView animateWithDuration:2.5f
+                   animations:^{
+                     self.backgroundMoviePoster.alpha = 1.0;
+                   }];
   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   [self setViewValues];
   [MBProgressHUD hideHUDForView:self.view animated:YES];
